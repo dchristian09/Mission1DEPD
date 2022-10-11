@@ -11,9 +11,13 @@ class MyNewApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home:assignment1page(
-
-      ),
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/':(context) => assignment1page(),
+        assignment2.routeName: (context) => assignment2(),
+        assignment1page.routeName:(context) => assignment1page()
+      },
     );
   }
 }

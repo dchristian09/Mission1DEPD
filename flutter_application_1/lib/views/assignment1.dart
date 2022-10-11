@@ -2,7 +2,7 @@ part of 'pages.dart';
 
 class assignment1page extends StatefulWidget {
   const assignment1page({super.key});
-
+  static const String routeName = '/';
   @override
   State<assignment1page> createState() => _assignment1pageState();
 }
@@ -144,6 +144,7 @@ class _assignment1pageState extends State<assignment1page> {
               child:Container(
                 width: double.infinity,
                 height: double.infinity,
+                
                 child: Stack(
                   children: [
                     Container(
@@ -169,7 +170,16 @@ class _assignment1pageState extends State<assignment1page> {
                         )
                         )
                       ),
-                    )
+                    ),
+                    Align(
+                    alignment: Alignment.bottomRight,
+                    child:ElevatedButton(
+                      child: Text("Book Now"),
+                      onPressed: (){
+                        Navigator.pushNamed(context, assignment2.routeName);
+                      }, 
+                  )
+                  ),
                   ],
                 )
               ),
